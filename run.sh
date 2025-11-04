@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 # Create venv if it doesn't exist
 if [ ! -d "venv" ]; then
   echo "Creating virtual environment..."
-  python3 -m venv venv
+  python3 -m venv venv --quiet
 fi
 
 # Activate venv
@@ -16,9 +16,9 @@ source venv/bin/activate
 # Install dependencies if requirements.txt exists
 if [ -f "requirements.txt" ]; then
   echo "Installing dependencies..."
-  pip install -r requirements.txt > /dev/null
+  pip install -r requirements.txt --quiet
 fi
 
 # Run the synth
 echo "Running synth..."
-python -m src.main
+python -m src.main --quiet
