@@ -21,8 +21,8 @@ class Synth:
 
         # Configure acoustic properties
         self.fs.setting("synth.reverb.active", 1)
-        self.fs.setting("synth.reverb.level", 0.8)
-        self.fs.setting("synth.reverb.room-size", 0.9)
+        self.fs.setting("synth.reverb.level", 10.0)
+        self.fs.setting("synth.reverb.room-size", .5)
         self.fs.setting("synth.chorus.active", 1)
         self.fs.setting("synth.chorus.nr", 3)
         self.fs.setting("synth.chorus.level", 1.2)
