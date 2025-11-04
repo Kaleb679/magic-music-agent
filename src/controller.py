@@ -1,6 +1,9 @@
 import asyncio
 from src.synth import Synth
 from src.lib.generators.RandomGenerator import RandomGenerator
+from src.lib.generators.MelodicGenerator import MelodicGenerator
+# from src.lib.generators.RandomGenerator import RandomGenerator
+
 
 
 class Controller:
@@ -67,7 +70,7 @@ class Controller:
     # -------------------------------------------------------------
     async def _ai_loop(self):
         """AI-driven generator loop (no manual input)."""
-        generator = RandomGenerator(self.synth)
+        generator = MelodicGenerator(self.synth)
         try:
             await generator.run()
         except asyncio.CancelledError:
